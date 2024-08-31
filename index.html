@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Photon Mapping Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .header {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .image-container img, .image-container .gif {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background-color: white;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        .citations {
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #555;
+        }
+        .citations li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <div class="header">My Work</div>
+        <div class="image-container">
+            <div>
+                <img src="media/scene1.png" alt="Scene 1">
+                <div class="caption">Scene 1</div>
+            </div>
+            <div>
+                <img src="media/scene1spottyslow.gif" alt="Scene 1 Iterations">
+                <div class="caption">Iterations of the PPM algorithm (~20K photons added each frame)</div>
+            </div>
+            <div>
+                <img src="media/scene2.png" alt="Scene 2">
+                <div class="caption"></div>
+            </div>
+            <div>
+                <img src="media/scene2FinePPMslow.gif" alt="Scene 2 Iterations">
+                <div class="caption">Iterations of PPM algorithm (~20K photons for the first half, then ~1MM photons per frame photons for remaining frames)</div>
+            </div>
+            <div>
+                <img src="media/scene3.png" alt="Scene 3">
+                <div class="caption">Scene 3</div>
+            </div>
+            <div>
+                <img src="media/scene4PPM.png" alt="Scene 4">
+                <div class="caption">Scene 4</div>
+            </div>
+            <!-- <div>
+                <img src="media/scene4PPM.gif" alt="Scene 4 Iterations">
+                <div class="caption">Iterations of PPM algorithm (~10MM photons per frame photons for remaining frames)</div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="header">Credits for assets</div>
+        <ul class="citations">
+            <li>Lily Wing for the modelling troll head, ladder, scene 1 and 2 rooms and for the writing on the walls</li>
+            <li><a href="https://github.com/yumcyaWiz/volppm">yumcyaWiz</a> for the water mesh geometry used in all scenes as well as the room geometry in scene 3 and 4.</li>
+            <li>Tile textures from <a href="https://www.cgbookcase.com/textures">cgbookcase</li>
+        </ul>
+    </div>
+
+</body>
+</html>
