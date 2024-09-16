@@ -10,6 +10,10 @@
             margin: 20px;
             background-color: #b7b7b7;
             color: #171717;
+            padding: 20px; /* Add padding to create space around the edges */
+            max-width: 1200px;  /* Limit maximum width for larger screens */
+            margin-left: auto;  /* Center content horizontally */
+            margin-right: auto; /* Center content horizontally */
         }
         .section {
             margin-bottom: 40px;
@@ -52,6 +56,15 @@
 
     <div class="section">
         <div class="header">My Chlorinated Nightmare</div>
+        <div>
+            <div class="caption">
+                This project is inspired by liminal spaces and the unease and nostalgia evoked by empty, tiled swimming pools in particular.
+                All scenes are rendered offline using my own implementation of the progressive photon mapping (PPM) algorithm. This method uses ray tracing
+                to find points visible from the eye in addition to tracing "photons" from light sources and storing their collisions with the scene in a spatial data structure.
+                A key strength of this algorithm is rendering caustic lighting which is characteristic of the swimming pool scenes I wanted to render.
+            </div>
+        </div>
+        <br/>
         <div class="image-container">
             <div>
                 <img src="media/scene1.png" alt="Scene 1">
